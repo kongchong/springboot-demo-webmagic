@@ -26,7 +26,9 @@ public class ProxyIpPageProcessor implements PageProcessor {
             .setRetryTimes(3)
             .setSleepTime(1000)
             .setCharset("UTF-8")
-            .addHeader("Accept-Encoding", "/")
+            .addHeader("Referer", "https://www.google.com/")
+            .addHeader("Host","www.xicidaili.com")
+            .addHeader("Cookie","_free_proxy_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTBkZWUwODk4YWQ2Y2U0ZGE1NWNiYzhlODIyM2NmOWUxBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUR6YXFrYzhQc2FibEZNeHZDeTR4eDZJaklxVWU5cW5lUENJRGI1d0V4UjA9BjsARg%3D%3D--b1c0a4171f11955f86c40ac9fd895a80967d41fd")
             .setUserAgent(UserAgentUtils.randomUserAgent());
 
     @Override
