@@ -1,0 +1,10 @@
+server:
+  port: 1964
+mybatis:
+  mapperLocations: com/kc/demo/webmagic/mapper/*.xml
+  typeAliasesPackage: com.kc.demo.webmagic.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  profiles:
+    active: '@profileActive@'

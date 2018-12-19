@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.demo.webmagic.mapper.ProxyIpMapper">
+  <resultMap id="BaseResultMap" type="com.kc.demo.webmagic.model.ProxyIp">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="port" jdbcType="INTEGER" property="port" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
+  </resultMap>
+
+</mapper>
