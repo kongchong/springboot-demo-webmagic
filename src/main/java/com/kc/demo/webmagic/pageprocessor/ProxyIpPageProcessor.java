@@ -53,7 +53,7 @@ public class ProxyIpPageProcessor implements PageProcessor {
         }
         page.putField("result", result);
         page.addTargetRequest("http://www.xicidaili.com/nn/2");
-        page.addTargetRequest("http://www.xicidaili.com/nt/");
+        page.addTargetRequest("http://www.xicidaili.com/nn/3");
 
     }
 
@@ -64,14 +64,6 @@ public class ProxyIpPageProcessor implements PageProcessor {
 
     public static void main(String[] args) {
         Spider.create(new ProxyIpPageProcessor())
-                .addUrl("http://www.xicidaili.com/nn/1")/*.addPipeline((resultItems, task) -> {
-            List<ProxyIp> results = resultItems.get("result");
-            results.forEach(result -> {
-                boolean b = CheckIPUtils.checkValidIP(result.getIp(), result.getPort());
-                if (b) {
-                    System.out.println(String.format("可用ip地址[%s]-----对应端口号[%S]", result.getIp(), result.getPort()));
-                }
-            });
-        })*/.thread(3).run();
+                .addUrl("http://www.xicidaili.com/nn/1").thread(3).run();
     }
 }
